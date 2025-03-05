@@ -26,4 +26,9 @@ public class SimpleCalculatorTest {
 		SimpleCalculator calc = new SimpleCalculator();
 		assertEquals(calc.div(8, 4), 2);
 	}
+	@Test (expected = java.lang.ArithmeticException.class)
+	public void testDivByZero() {
+		SimpleCalculator calc = new SimpleCalculator();
+		calc.div(8, 0);
+	}
 }
